@@ -33,17 +33,22 @@ void print(int v1,int c2,int m3,int p4,int sp5)
     printf("Tax id: 89044637\nPh.no: 9459299493\nE.Mail id: abcpizza@gmail.com\n");
    printf("-----------------------------------------\n\n");  
 
-   printf("| S.no.||          Item name         || Quantity ||  price  || Total(Rs)    |\n");
-   printf("|   1. ||   Veg pizza                ||   %d     ||    %d   ||   %d         |\n",v1/250,250,v1);
-   printf("|   2. ||   Chicken pizza            ||   %d     ||    %d   ||   %d         |\n",c2/300,300,c2);
-   printf("|   3. ||   Mutton pizza             ||   %d     ||    %d   ||   %d         |\n",m3/500,500,m3);
-   printf("|   4. ||   Paneer special pizza     ||   %d     ||    %d   ||   %d         |\n",p4/450,450,p4);
-   printf("|   5. ||   ABC special pizza        ||   %d     ||    %d   ||   %d         |\n",sp5/550,550,sp5);
+   printf("| S.no.||          Item name         || Quantity||  price   || Total(Rs)    \t|\n");
+   if(v1)
+   printf("|   1. ||   Veg pizza                ||   %d     ||    %d   ||   %d         \t|\n",v1/250,250,v1);
+   if(c2)
+   printf("|   2. ||   Chicken pizza            ||   %d     ||    %d   ||   %d         \t|\n",c2/300,300,c2);
+   if(m3)
+   printf("|   3. ||   Mutton pizza             ||   %d     ||    %d   ||   %d         \t|\n",m3/500,500,m3);
+   if(p4)
+   printf("|   4. ||   Paneer special pizza     ||   %d     ||    %d   ||   %d         \t|\n",p4/450,450,p4);
+   if(sp5)
+   printf("|   5. ||   ABC special pizza        ||   %d     ||    %d   ||   %d         \t|\n",sp5/550,550,sp5);
    printf("\n");
    printf("=======================================================================================\n");
    printf("                                           Grand Total (Rs.)           %d\n",sum);
    printf("                                           Total Quantity              %d\n",qn);
-   printf("                                           Disc.(in percent)           %.2f\n",d);
+   printf("                                           Disc.(in percent)           %.2f\n",d*100);
    printf("                                           To Pay(In Rs.)              %d\n\n\n",dis);
    printf("       ********* THANK YOU VISIT AGAIN TO OUR SHOP *****************");
 
@@ -75,9 +80,9 @@ void main()
         printf("7. and any numeric when Order is Finish\n\n ");
         printf("----------------------------------------------\n");
         printf("Dear Customer, Here we have some SPECIAL OFFER for you !!!!!!\n");
-        printf(" 1. On purchase Of (2000 - 2500)Rs   ---  20(in percent)  \n ");
-        printf("2. On purchase Of (2500 - 3500)Rs   ---  25(in percent) \n ");
-        printf("3. On purchase Of ( above 3500)Rs   ---  30(in percent) \n ");
+        printf(" 1. On purchase Of (2000 - 2500)Rs  ---  20 %c  \n ",'%');
+        printf("2. On purchase Of (2500 - 3500)Rs   ---  25 %c \n ",'%');
+        printf("3. On purchase Of ( above 3500)Rs   ---  30 %c \n ",'%');
 
         printf("Enter your choice and quantity\n");
         scanf("%d%d",&choice,&n);
